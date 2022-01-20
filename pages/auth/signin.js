@@ -11,7 +11,7 @@ const signIn = (props) => {
         <img className="w-80" src="https://links.papareact.com/ocw" alt="" />
         <p className="font-xs italic"> The app is just a clone built for educational purposes</p>
         <div className="mt-40">
-          {Object.values(providers).map((provider) => (
+          {providers && Object.values(providers).map((provider) => (
             <div key={provider.name}>
               <button className="p-3 bg-blue-500 rounded-lg text-white"
                 onClick={() => SignIntoProvider(provider.id, {callbackUrl: "/"})}>
