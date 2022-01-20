@@ -10,6 +10,7 @@ const signIn = (props) => {
       <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-44 px-14 text-center">
         <img className="w-80" src="https://links.papareact.com/ocw" alt="" />
         <p className="font-xs italic"> The app is just a clone built for educational purposes.</p>
+        <h2>HELLO</h2>
         <div className="mt-40">
           {providers && Object.values(providers).map((provider) => (
             <div key={provider.name}>
@@ -27,6 +28,7 @@ const signIn = (props) => {
 
 export async function getServerSideProps() {
   const providers = await getProviders();
+  console.log(providers);
   return {
     props: {
       providers,
