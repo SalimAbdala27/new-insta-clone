@@ -3,6 +3,8 @@ import GoogleProvider from "next-auth/providers/google"
 
 export default NextAuth({
   // Configure one or more authentication providers
+  console.log("TEmporary");
+  console.log(process.env);
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
